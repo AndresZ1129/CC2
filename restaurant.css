@@ -8,3 +8,10 @@ form {
   margin: 20px;
   text-aglin: right;
 }
+select{
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border_radius: 4px;
+}
+
