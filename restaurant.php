@@ -32,12 +32,21 @@
             'Fox Bros. BBQ' => '15.05',
             'South City Kitchen Midtown' => '29.00',
             );
-        function sortByPrice(a,b){
+        function sortByPrice($a,$b){
             return a-b;
         }
-        function sortByName(a,b)
-            return strcasecmp (a-b);
+        function sortByName($a,$b)
+            return strcasecmp ($a-$b);
         }
+        if (isset($_GET['sort'])) {
+    $sortType = $_GET['sort'];
+    if ($sortType == 'price') {
+        uasort($restaurants, 'sortByPrice');
+    } elseif ($sortType == 'name') {
+        uksort($restaurants, 'sortByName');
+    }
+}
+
 
         // display form data
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
