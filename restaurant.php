@@ -5,6 +5,7 @@
     </head>
 
     <body>
+        
         <!-- dropdown menu -->
     <form method="GET">
         <label for="sort">Sort by:</label>
@@ -37,6 +38,25 @@
             return strcasecmp (a-b);
         }
 
+        // display form data
+        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                $formData = $_GET;
+            
+                // Check if the form fields are not empty
+                if (!empty($formData['name']) && !empty($formData['email'])) {
+                    echo "<h2>Form Data:</h2>";
+                    echo "<ul>";
+                    
+                    foreach ($formData as $key => $value) {
+                        echo "<li><strong>{$key}:</strong> {$value}</li>";
+                    }
+            
+                    echo "</ul>";
+                } 
+                else {
+                    echo "Please fill out all fields in the form.";
+                }
+            
         ?>
     </body>
 </html>
