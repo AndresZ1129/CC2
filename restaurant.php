@@ -7,7 +7,7 @@
     <body>
         <!-- dropdown menu -->
     <form method="GET">
-        <label for="sort">Sory by:</label>
+        <label for="sort">Sort by:</label>
         <select name="sort" id="sort">
             <option value="name">Name</option>
             <option value="price">Price</option>
