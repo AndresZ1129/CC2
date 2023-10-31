@@ -1,10 +1,11 @@
 <html>
     <head>
-        <title>Restaurant</title>
+        <title>Restaurant Ranking</title>
         <link rel="stylesheet" href="restaurant.css">
     </head>
 
     <body>
+        <h1> Restaurant Ranking</h1>
         
         <!-- dropdown menu -->
     <form method="GET">
