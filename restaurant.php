@@ -48,17 +48,17 @@
 }
 
 
-        // display form data
-        if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-                $formData = $_GET;
+        // displaying form data
+            if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+                $formFields = $_GET;
             
                 // Check if the form fields are not empty
-                if (!empty($formData['name']) && !empty($formData['email'])) {
+                if (!empty($formFields['name']) && !empty($formFields['price'])) {
                     echo "<h2>Form Data:</h2>";
                     echo "<ul>";
                     
-                    foreach ($formData as $key => $value) {
-                        echo "<li><strong>{$key}:</strong> {$value}</li>";
+                    foreach ($formFields as $name => $price) {
+                        echo "<li><strong>{$name}:</strong> {$price}</li>";
                     }
             
                     echo "</ul>";
