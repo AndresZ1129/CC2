@@ -30,6 +30,12 @@
             'Fox Bros. BBQ' => '15.05',
             'South City Kitchen Midtown' => '29.00',
             );
+        function sortByPrice(a,b){
+            return a-b;
+        }
+        function sortByName(a,b)
+            return strcasecmp (a-b);
+        }
 
         ?>
     </body>
